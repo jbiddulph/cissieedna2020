@@ -156,7 +156,7 @@
                             </div>
                             <div class="modal-body">
                                 @php
-                                    $mainphoto = str_replace('public/', '/', $product->product_image)
+                                    $mainphoto = str_replace('public/', '/storage/', $product->product_image)
                                 @endphp
                                 <img src="{{ asset($mainphoto) }}" width="200" class="img-responsive  img-centered" alt="{{$product->title}}">
                                 <div class="form-group">
