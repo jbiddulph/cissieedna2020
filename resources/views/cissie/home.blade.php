@@ -6,7 +6,7 @@
         <div class="container" id="maincontent" tabindex="-1">
             <div class="row">
                 <div class="col-lg-12">
-                    <img class="img-responsive" width="350" src="img/profile.png" alt="">
+                    <img class="img-responsive" width="350" src="http://www.cissieedna.com/img/profile.png" alt="">
                     <div class="intro-text">
                         <h1 class="name">{{$settings[0]->site_name}}</h1>
                         <hr class="star-light">
@@ -36,12 +36,15 @@
                             </div>
                         </div>
                         @php
-                            $mainphoto = str_replace('public/', '/', $product->product_image)
+                            $mainphoto = str_replace('public/', '/storage/', $product->product_image)
                         @endphp
                         <img src="{{ asset($mainphoto) }}" class="img-responsive" alt="{{$product->title}}">
                     </a>
                 </div>
                 @endforeach
+            </div>
+            <div class="row">
+                {{ $products->links() }}
             </div>
         </div>
     </section>
@@ -56,11 +59,8 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-4 col-lg-offset-2">
+                <div class="col-lg-8 col-lg-offset-2">
                     <p>{{$settings[0]->about_description}}</p>
-                </div>
-                <div class="col-lg-4">
-                    <p>My work is available to buy at The Vintage Emporium, Tarmount Studios in Shoreham-by-sea. I'm always creating new things! So there's loads more to see and buy! Thanks for taking a look at my world!</p>
                 </div>
                 <!--<div class="col-lg-8 col-lg-offset-2 text-center">
                     <a href="#" class="btn btn-lg btn-outline">
@@ -139,10 +139,10 @@
                         <h3>Around the Web</h3>
                         <ul class="list-inline">
                             <li>
-                                <a href="{{$settings[0]->facebook}}" class="btn-social btn-outline"><span class="sr-only">Facebook</span><i class="fa fa-fw fa-facebook"></i></a>
+                                <a href="{{$settings[0]->facebook}}" class="btn-social btn-outline"><span class="sr-only">Facebook</span><i class="fab fa-facebook-f"></i></a>
                             </li>
                             <li>
-                                <a href="{{$settings[0]->twitter}}" class="btn-social btn-outline"><span class="sr-only">Twitter</span><i class="fa fa-fw fa-twitter"></i></a>
+                                <a href="{{$settings[0]->twitter}}" class="btn-social btn-outline"><span class="sr-only">Twitter</span><i class="fab fa-twitter"></i></a>
                             </li>
 
 
@@ -190,7 +190,7 @@
                             <h2>{{$product->title}}</h2>
                             <hr class="star-primary">
                             @php
-                                $mainphoto = str_replace('public/', '/', $product->product_image)
+                                $mainphoto = str_replace('public/', '/storage/', $product->product_image)
                             @endphp
                             <img src="{{ asset($mainphoto) }}" class="img-responsive  img-centered" alt="{{$product->title}}">
                             <p>{{$product->description}}</p>

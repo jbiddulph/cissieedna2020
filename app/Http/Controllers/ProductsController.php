@@ -18,7 +18,7 @@ class ProductsController extends Controller
         $this->middleware('admin',['except'=>array('index','show')]);
     }
     public function index() {
-        $products = Product::latest()->where('is_live',1)->paginate(10);
+        $products = Product::latest()->where('is_live',1)->paginate(9);
         $settings = Setting::all();
         return view('cissie.home', compact('products','settings'));
     }
