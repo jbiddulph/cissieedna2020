@@ -41,7 +41,7 @@ class ProductsController extends Controller
             'height'=>request('height'),
             'width'=>request('width'),
             'category_id'=>request('category_id'),
-            'is_live'=>request('category_id'),
+            'is_live'=>request('is_live'),
             'product_image'=>$productphoto,
         ]);
         return redirect()->back()->with('message','Product successfully updated!');
