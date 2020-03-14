@@ -211,6 +211,10 @@
         margin: auto;
         margin-bottom: 20px;
     }
+    .pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
+        background-color: #c40023;
+        border-color: #c40023;
+    }
 
 
 </style>
