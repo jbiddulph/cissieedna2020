@@ -206,7 +206,7 @@
 <style>
     a.portfolio-link img
     {
-        width: 260px;
+        height: 260px;
         text-align: center;
         margin: auto;
         margin-bottom: 20px;
