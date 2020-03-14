@@ -203,3 +203,14 @@
     </div>
     @endforeach
 @endsection
+<style>
+    a.portfolio-link img
+    {
+        width: 260px;
+        text-align: center;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+
+
+</style>
