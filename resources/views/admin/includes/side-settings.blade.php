@@ -169,6 +169,71 @@
                                     @enderror
                                 </div>
                                 <div class="form-group">
+                                    <label for="description">Product Description</label>
+                                    <textarea name="description" id="description" class="form-control @error('description') is-invalid @enderror" cols="30" rows="10">{{ $product->description }}</textarea>
+                                    @error('description')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
+                                </div>
+                                <div class="form-group">
+                                    <label for="cost">Product Cost</label>
+                                    <input type="text" name="cost" id="cost" class="form-control @error('cost') is-invalid @enderror" value="{{ $product->cost }}">
+                                    @error('cost')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
+                                </div>
+                                <div class="form-group">
+                                    <label for="height">Product Height</label>
+                                    <input type="text" name="height" id="height" class="form-control @error('height') is-invalid @enderror" value="{{ $product->height }}">
+                                    @error('height')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
+                                </div>
+                                <div class="form-group">
+                                    <label for="width">Product Width</label>
+                                    <input type="text" name="width" id="width" class="form-control @error('width') is-invalid @enderror" value="{{ $product->width  }}">
+                                    @error('width')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
+                                </div>
+                                <div class="form-group">
+                                    <label for="product_image">Product Category</label>
+                                    <select name="category_id" class="form-control @error('category_id') is-invalid @enderror" id="category_id">
+                                        <option value="">Please select</option>
+                                        @foreach(App\Category::all() as $catName)
+                                            <option value="{{$catName->id}}"{{$product->category_id==$catName->id?'selected':''}}>{{$catName->category_name}}</option>
+                                        @endforeach
+                                    </select>
+                                    @error('category_id')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="height">Product Live</label>
+                                        <label for="is_live">Live</label>
+                                        <select name="is_live" class="form-control" id="is_live">
+                                            <option value="0"{{$product->is_live==0?'selected':''}}>Draft</option>
+                                            <option value="1"{{$product->is_live==1?'selected':''}}>Live</option>
+                                        </select>
+                                        @error('is_live')
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                        @enderror
+                                    </div>
+                                </div>
+                                <div class="form-group">
                                     <label for="title">Product Image</label>
                                     <input type="file" name="product_image" class="form-control @error('product_image') is-invalid @enderror" value="{{ old($product->product_image) }}">
                                     @error('product_image')

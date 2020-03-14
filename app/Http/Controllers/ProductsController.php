@@ -36,6 +36,12 @@ class ProductsController extends Controller
         }
         $product->update([
             'title'=>request('title'),
+            'description'=>request('description'),
+            'cost'=>request('cost'),
+            'height'=>request('height'),
+            'width'=>request('width'),
+            'category_id'=>request('category_id'),
+            'is_live'=>request('category_id'),
             'product_image'=>$productphoto,
         ]);
         return redirect()->back()->with('message','Product successfully updated!');
