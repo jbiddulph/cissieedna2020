@@ -13,16 +13,13 @@
 
     <title>Cissie Ednas Fancies</title>
 
-    <!-- Bootstrap Core CSS -->
-    <link href="http://www.cissieedna.com/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <!-- Custom Fonts -->
 
+    <!-- Custom Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="https://kit.fontawesome.com/e167166ec4.js"  SameSite="none Secure" crossorigin="anonymous"></script>
 
 
@@ -36,6 +33,7 @@
     ga('send', 'pageview');
 
 </script>
+
 
 </head>
 <body>
@@ -77,7 +75,6 @@
         </main>
     </div>
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+
 </body>
 </html>
