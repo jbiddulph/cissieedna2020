@@ -113,8 +113,13 @@ header .intro-text .skills {
 .navbar-custom .navbar-brand.active {
     color: white;
 }
+.top-bar {
+    display:flex;
+    justify-content: space-between;
+}
 .navbar-custom .navbar-nav {
     letter-spacing: 1px;
+    display: inline-block;
 }
 .navbar-custom .navbar-nav li a {
     color: white;
