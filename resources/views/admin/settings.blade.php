@@ -3,6 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row">
+        @include('admin.includes.side-settings')
         <div class="col-md-8">
             @if(Session::has('message'))
                 <div class="alert alert-success">
@@ -13,7 +14,7 @@
                 </div>
             @endif
             <div class="card">
-                <div class="card-header">Cissie Ednas Fancies - Admin</div>
+                <div class="card-header">Cissie Ednas Fancies - Settings</div>
                 <div class="card-body">
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
@@ -168,7 +169,6 @@
                 </div>
             </div>
         </div>
-        @include('admin.includes.side-settings')
     </div>
 </div>
 @endsection
