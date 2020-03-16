@@ -17,12 +17,12 @@
                             <strong>{{$category->category_name}}</strong>
                             <span>
                                 <a href="#" class="btn btn-sm btn-warning" data-toggle="modal" data-target="#editCatModal{{$category->id}}">Edit</a>
-                                <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#deleteCategoryModal"> X </button>
+                                <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#deleteCategoryModal{{$category->id}}"> X </button>
                             </span>
                         </li>
-                    @endforeach
-                    <!-- Delete Category Modal -->
-                        <div class="modal fade" id="deleteCategoryModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+                        <!-- Delete Category Modal -->
+                        <div class="modal fade" id="deleteCategoryModal{{$category->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                     <form action="{{route('category.delete')}}" method="post" enctype="multipart/form-data">@csrf
@@ -41,6 +41,7 @@
                                 </div>
                             </div>
                         </div>
+                    @endforeach
                 </ul>
 
             <small>When deleting, make sure products not linked to category</small>
@@ -116,12 +117,13 @@
                         <strong>{{$product->title}}</strong>
                         <span>
                             <a href="#" class="btn btn-sm btn-warning" data-toggle="modal" data-target="#editProductModal{{$product->id}}">Edit</a>
-                            <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#deleteProductModal"> X </button>
+                            <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#deleteProductModal{{$product->id}}"> X </button>
                         </span>
                     </li>
-                @endforeach
+
+
                 <!-- Delete Product Modal -->
-                    <div class="modal fade" id="deleteProductModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal fade" id="deleteProductModal{{$product->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <form action="{{route('product.delete')}}" method="post" enctype="multipart/form-data">@csrf
@@ -140,6 +142,7 @@
                             </div>
                         </div>
                     </div>
+                @endforeach
             </ul>
         </div>
         <!-- Product Modals -->
