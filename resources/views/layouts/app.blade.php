@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
+    <meta name="description" content="Cissie Ednas Fancies, Handmade up-cycled vintage, retro and kitsch clothing and fabric into accessories for you, your loved ones and your home!">
     <meta name="author" content="">
 
     <!-- CSRF Token -->
