@@ -5,7 +5,9 @@
  */
 
 require('./bootstrap');
-
+require('./custom_scripts');
+require('./jqBootstrapValidation');
+require('./contact_me');
 window.Vue = require('vue');
 
 /**
